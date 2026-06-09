@@ -18,10 +18,8 @@ defineProps<{
     />
     <div class="flex-1 min-w-0">
       <p class="font-semibold text-gray-900 text-sm truncate">{{ team.name }}</p>
-      <p class="text-xs text-gray-400">FIFA Rank {{ team.fifa_rank }}</p>
     </div>
     <div class="flex items-center gap-2 flex-shrink-0">
-      <SeedBadge :seed="team.seed" />
       <div v-if="showPoints" class="text-right">
         <span class="text-lg font-bold text-primary">{{ points ?? 0 }}</span>
         <span class="text-xs text-gray-400 block">pts</span>

@@ -4,6 +4,8 @@ import type { FixtureWithTeams } from '~/composables/useFixtures'
 const props = defineProps<{ fixture: FixtureWithTeams }>()
 
 const isFinished = computed(() => ['FT', 'AET', 'PEN'].includes(props.fixture.status))
+
+const truncate = (name: string) => name.length > 12 ? name.slice(0, 12) + '…' : name
 const isPending = computed(() => props.fixture.status === 'NS')
 
 const formattedDate = computed(() => {
@@ -19,7 +21,7 @@ const formattedDate = computed(() => {
       <div class="flex-1 flex flex-col items-end gap-1 min-w-0">
         <div class="flex items-center gap-2">
           <span class="text-sm font-medium text-gray-800 truncate text-right">
-            {{ fixture.homeTeam?.name ?? `Team ${fixture.home_team_api_id}` }}
+            {{ truncate(fixture.homeTeam?.name ?? `Team ${fixture.home_team_api_id}`) }}
           </span>
           <img
             v-if="fixture.homeTeam"
@@ -55,7 +57,7 @@ const formattedDate = computed(() => {
           />
           <div v-else class="w-8 h-5 bg-gray-200 rounded-sm flex-shrink-0" />
           <span class="text-sm font-medium text-gray-800 truncate">
-            {{ fixture.awayTeam?.name ?? `Team ${fixture.away_team_api_id}` }}
+            {{ truncate(fixture.awayTeam?.name ?? `Team ${fixture.away_team_api_id}`) }}
           </span>
         </div>
       </div>

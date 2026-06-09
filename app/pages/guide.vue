@@ -16,7 +16,7 @@ onMounted(fetchTeams)
       <div class="rounded-xl border border-gray-100 bg-gray-50 p-4">
         <p class="text-xs font-semibold text-primary uppercase tracking-wide mb-2">The Draw</p>
         <p class="text-sm text-gray-700 leading-relaxed">
-          48 teams are split into 4 seed pods by FIFA ranking — pod 1 has the favourites, pod 4 the underdogs.
+          48 teams are split into 4 seed pods by ranking — pod 1 has the favourites, pod 4 the underdogs.
           Each player is randomly assigned <span class="font-semibold">one team per pod</span> (4 teams total).
           You earn points for everything your teams do throughout the tournament.
         </p>
@@ -78,7 +78,7 @@ onMounted(fetchTeams)
         <p class="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Upset Bonus</p>
         <p class="text-xs text-gray-500 mb-3">
           Awarded when a lower-ranked team beats or draws with a higher-ranked team.
-          The bigger the gap in FIFA rankings, the bigger the bonus.
+          The bigger the gap in rankings, the bigger the bonus.
         </p>
 
         <p class="text-xs font-medium text-gray-600 mb-1.5">Win bonus</p>
@@ -124,8 +124,7 @@ onMounted(fetchTeams)
 
       <!-- Team rankings -->
       <div class="rounded-xl border border-gray-100 bg-gray-50 p-4">
-        <p class="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Team Rankings</p>
-        <p class="text-xs text-gray-500 mb-3">All 48 teams by FIFA ranking.</p>
+        <p class="text-xs font-semibold text-primary uppercase tracking-wide mb-3">Team Rankings</p>
         <div class="flex flex-col">
           <div
             v-for="team in teams"

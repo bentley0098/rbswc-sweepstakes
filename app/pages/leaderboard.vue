@@ -49,17 +49,6 @@ onUnmounted(() => {
           No participants yet
         </p>
       </template>
-
-      <!-- Seed legend -->
-      <div v-if="appState?.draw_completed" class="mt-2 rounded-xl bg-gray-50 border border-gray-100 p-4">
-        <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Seed legend</p>
-        <div class="flex flex-wrap gap-2">
-          <div v-for="s in [1,2,3,4]" :key="s" class="flex items-center gap-1.5">
-            <SeedBadge :seed="(s as 1|2|3|4)" />
-            <span class="text-xs text-gray-600">{{ ['Favourites','Strong','Mid','Underdogs'][s-1] }}</span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>

@@ -274,17 +274,18 @@ onMounted(checkAuth)
         <!-- Draw actions -->
         <div class="rounded-xl border border-gray-200 p-4">
           <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Draw</p>
+          <!-- Draw buttons temporarily disabled to prevent accidental trigger before tournament starts -->
           <div class="flex flex-col gap-2">
             <button
               class="w-full bg-primary text-white font-bold py-3 rounded-xl disabled:opacity-40 active:scale-95 transition-transform"
-              :disabled="loading || appState?.draw_completed"
+              disabled
               @click="triggerDraw()"
             >
               🎲 Run Draw
             </button>
             <button
               class="w-full bg-primary text-white font-bold py-3 rounded-xl disabled:opacity-40 active:scale-95 transition-transform"
-              :disabled="loading || (participants.length < 2 && !appState?.draw_completed)"
+              disabled
               @click="triggerDraw(true)"
             >
               🎲 Run Draw (force)
@@ -292,7 +293,7 @@ onMounted(checkAuth)
             <button
               v-if="appState?.draw_completed"
               class="w-full bg-red-600 text-white font-bold py-3 rounded-xl disabled:opacity-40 active:scale-95 transition-transform"
-              :disabled="loading"
+              disabled
               @click="resetDraw"
             >
               ↩️ Reset Draw
