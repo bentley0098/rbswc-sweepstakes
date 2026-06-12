@@ -18,7 +18,7 @@ const formattedDate = computed(() => {
   <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-3">
     <div class="flex items-center gap-2">
       <!-- Home team -->
-      <div class="flex-1 flex flex-col items-end gap-1 min-w-0">
+      <div class="flex-1 flex flex-col items-end gap-0.5 min-w-0">
         <div class="flex items-center gap-2">
           <span class="text-sm font-medium text-gray-800 truncate text-right">
             {{ truncate(fixture.homeTeam?.name ?? `Team ${fixture.home_team_api_id}`) }}
@@ -31,6 +31,9 @@ const formattedDate = computed(() => {
           />
           <div v-else class="w-8 h-5 bg-gray-200 rounded-sm flex-shrink-0" />
         </div>
+        <span v-if="fixture.homeParticipant" class="text-xs text-gray-400 text-right leading-none">
+          {{ fixture.homeParticipant }}
+        </span>
       </div>
 
       <!-- Score / time -->
@@ -47,7 +50,7 @@ const formattedDate = computed(() => {
       </div>
 
       <!-- Away team -->
-      <div class="flex-1 flex flex-col items-start gap-1 min-w-0">
+      <div class="flex-1 flex flex-col items-start gap-0.5 min-w-0">
         <div class="flex items-center gap-2">
           <img
             v-if="fixture.awayTeam"
@@ -60,6 +63,9 @@ const formattedDate = computed(() => {
             {{ truncate(fixture.awayTeam?.name ?? `Team ${fixture.away_team_api_id}`) }}
           </span>
         </div>
+        <span v-if="fixture.awayParticipant" class="text-xs text-gray-400 leading-none">
+          {{ fixture.awayParticipant }}
+        </span>
       </div>
     </div>
   </div>
