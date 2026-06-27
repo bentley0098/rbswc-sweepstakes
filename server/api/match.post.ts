@@ -34,7 +34,7 @@ export default defineEventHandler(async (event) => {
       throw createError({ statusCode: 400, message: 'homeTeamApiId, awayTeamApiId, stage and matchDate are required' })
     }
     const { data, error } = await supabase.from('matches').insert({
-      api_fixture_id: Date.now(), // synthetic ID for manually added matches
+      api_fixture_id: Math.floor(Date.now() / 1000), // Unix seconds — fits in INTEGER column
       home_team_api_id: body.homeTeamApiId,
       away_team_api_id: body.awayTeamApiId,
       stage: body.stage,

@@ -15,9 +15,9 @@
 --   136137 Saudi Ara.  134500 Australia   134502 Ivory Coast 136471 Paraguay
 --   136482 S. Africa   136450 Scotland    134516 Algeria     136475 DR Congo
 --   134513 Ghana       140145 Jordan      140148 Iraq        137449 New Zealand
---   200001 Norway      200002 Sweden      200003 Czech Rep.  200004 Bosnia & Herz.
---   200005 Egypt       200006 Tunisia     200007 Cape Verde  200008 Qatar
---   200009 Panama      200010 Haiti       200011 Uzbekistan  200012 Curaçao
+--   200001 Norway      200002 Sweden      200003 Czech Rep.  200004 Egypt
+--   200005 Uzbekistan  200006 Bosnia&Herz 200007 Panama      200008 Tunisia
+--   200009 Cape Verde  200010 Haiti       200011 Curaçao     200012 Qatar
 
 INSERT INTO matches (api_fixture_id, home_team_api_id, away_team_api_id, stage, match_date, status) VALUES
 
@@ -30,12 +30,12 @@ INSERT INTO matches (api_fixture_id, home_team_api_id, away_team_api_id, stage, 
 (10006, 136482, 134517, 'Group Stage', '2026-06-25T01:00:00Z', 'NS'), -- South Africa vs South Korea
 
 -- ─── GROUP B: Canada, Bosnia & Herzegovina, Qatar, Switzerland ───────────────
-(10007, 140073, 200004, 'Group Stage', '2026-06-12T19:00:00Z', 'NS'), -- Canada vs Bosnia & Herzegovina
-(10008, 200008, 134506, 'Group Stage', '2026-06-13T19:00:00Z', 'NS'), -- Qatar vs Switzerland
-(10009, 134506, 200004, 'Group Stage', '2026-06-18T19:00:00Z', 'NS'), -- Switzerland vs Bosnia & Herzegovina
-(10010, 140073, 200008, 'Group Stage', '2026-06-18T22:00:00Z', 'NS'), -- Canada vs Qatar
+(10007, 140073, 200006, 'Group Stage', '2026-06-12T19:00:00Z', 'NS'), -- Canada vs Bosnia & Herzegovina
+(10008, 200012, 134506, 'Group Stage', '2026-06-13T19:00:00Z', 'NS'), -- Qatar vs Switzerland
+(10009, 134506, 200006, 'Group Stage', '2026-06-18T19:00:00Z', 'NS'), -- Switzerland vs Bosnia & Herzegovina
+(10010, 140073, 200012, 'Group Stage', '2026-06-18T22:00:00Z', 'NS'), -- Canada vs Qatar
 (10011, 134506, 140073, 'Group Stage', '2026-06-24T19:00:00Z', 'NS'), -- Switzerland vs Canada
-(10012, 200004, 200008, 'Group Stage', '2026-06-24T19:00:00Z', 'NS'), -- Bosnia & Herzegovina vs Qatar
+(10012, 200006, 200012, 'Group Stage', '2026-06-24T19:00:00Z', 'NS'), -- Bosnia & Herzegovina vs Qatar
 
 -- ─── GROUP C: Brazil, Morocco, Haiti, Scotland ───────────────────────────────
 (10013, 134496, 136139, 'Group Stage', '2026-06-13T22:00:00Z', 'NS'), -- Brazil vs Morocco
@@ -54,35 +54,35 @@ INSERT INTO matches (api_fixture_id, home_team_api_id, away_team_api_id, stage, 
 (10024, 136471, 134500, 'Group Stage', '2026-06-26T02:00:00Z', 'NS'), -- Paraguay vs Australia
 
 -- ─── GROUP E: Germany, Curaçao, Ivory Coast, Ecuador ────────────────────────
-(10025, 133907, 200012, 'Group Stage', '2026-06-14T17:00:00Z', 'NS'), -- Germany vs Curaçao
+(10025, 133907, 200011, 'Group Stage', '2026-06-14T17:00:00Z', 'NS'), -- Germany vs Curaçao
 (10026, 134502, 134507, 'Group Stage', '2026-06-14T23:00:00Z', 'NS'), -- Ivory Coast vs Ecuador
 (10027, 133907, 134502, 'Group Stage', '2026-06-20T20:00:00Z', 'NS'), -- Germany vs Ivory Coast
-(10028, 134507, 200012, 'Group Stage', '2026-06-21T00:00:00Z', 'NS'), -- Ecuador vs Curaçao
-(10029, 200012, 134502, 'Group Stage', '2026-06-25T20:00:00Z', 'NS'), -- Curaçao vs Ivory Coast
+(10028, 134507, 200011, 'Group Stage', '2026-06-21T00:00:00Z', 'NS'), -- Ecuador vs Curaçao
+(10029, 200011, 134502, 'Group Stage', '2026-06-25T20:00:00Z', 'NS'), -- Curaçao vs Ivory Coast
 (10030, 134507, 133907, 'Group Stage', '2026-06-25T20:00:00Z', 'NS'), -- Ecuador vs Germany
 
 -- ─── GROUP F: Netherlands, Japan, Sweden, Tunisia ────────────────────────────
 (10031, 133905, 134503, 'Group Stage', '2026-06-14T20:00:00Z', 'NS'), -- Netherlands vs Japan
-(10032, 200002, 200006, 'Group Stage', '2026-06-15T02:00:00Z', 'NS'), -- Sweden vs Tunisia
+(10032, 200002, 200008, 'Group Stage', '2026-06-15T02:00:00Z', 'NS'), -- Sweden vs Tunisia
 (10033, 133905, 200002, 'Group Stage', '2026-06-20T17:00:00Z', 'NS'), -- Netherlands vs Sweden
-(10034, 200006, 134503, 'Group Stage', '2026-06-21T04:00:00Z', 'NS'), -- Tunisia vs Japan
+(10034, 200008, 134503, 'Group Stage', '2026-06-21T04:00:00Z', 'NS'), -- Tunisia vs Japan
 (10035, 134503, 200002, 'Group Stage', '2026-06-25T23:00:00Z', 'NS'), -- Japan vs Sweden
-(10036, 200006, 133905, 'Group Stage', '2026-06-25T23:00:00Z', 'NS'), -- Tunisia vs Netherlands
+(10036, 200008, 133905, 'Group Stage', '2026-06-25T23:00:00Z', 'NS'), -- Tunisia vs Netherlands
 
 -- ─── GROUP G: Belgium, Egypt, Iran, New Zealand ──────────────────────────────
-(10037, 134515, 200005, 'Group Stage', '2026-06-15T19:00:00Z', 'NS'), -- Belgium vs Egypt
+(10037, 134515, 200004, 'Group Stage', '2026-06-15T19:00:00Z', 'NS'), -- Belgium vs Egypt
 (10038, 134511, 137449, 'Group Stage', '2026-06-16T01:00:00Z', 'NS'), -- Iran vs New Zealand
 (10039, 134515, 134511, 'Group Stage', '2026-06-21T19:00:00Z', 'NS'), -- Belgium vs Iran
-(10040, 137449, 200005, 'Group Stage', '2026-06-22T01:00:00Z', 'NS'), -- New Zealand vs Egypt
-(10041, 200005, 134511, 'Group Stage', '2026-06-27T03:00:00Z', 'NS'), -- Egypt vs Iran
+(10040, 137449, 200004, 'Group Stage', '2026-06-22T01:00:00Z', 'NS'), -- New Zealand vs Egypt
+(10041, 200004, 134511, 'Group Stage', '2026-06-27T03:00:00Z', 'NS'), -- Egypt vs Iran
 (10042, 137449, 134515, 'Group Stage', '2026-06-27T03:00:00Z', 'NS'), -- New Zealand vs Belgium
 
 -- ─── GROUP H: Spain, Cape Verde, Saudi Arabia, Uruguay ───────────────────────
-(10043, 133909, 200007, 'Group Stage', '2026-06-15T16:00:00Z', 'NS'), -- Spain vs Cape Verde
+(10043, 133909, 200009, 'Group Stage', '2026-06-15T16:00:00Z', 'NS'), -- Spain vs Cape Verde
 (10044, 136137, 134504, 'Group Stage', '2026-06-15T22:00:00Z', 'NS'), -- Saudi Arabia vs Uruguay
 (10045, 133909, 136137, 'Group Stage', '2026-06-21T16:00:00Z', 'NS'), -- Spain vs Saudi Arabia
-(10046, 134504, 200007, 'Group Stage', '2026-06-21T22:00:00Z', 'NS'), -- Uruguay vs Cape Verde
-(10047, 200007, 136137, 'Group Stage', '2026-06-27T00:00:00Z', 'NS'), -- Cape Verde vs Saudi Arabia
+(10046, 134504, 200009, 'Group Stage', '2026-06-21T22:00:00Z', 'NS'), -- Uruguay vs Cape Verde
+(10047, 200009, 136137, 'Group Stage', '2026-06-27T00:00:00Z', 'NS'), -- Cape Verde vs Saudi Arabia
 (10048, 134504, 133909, 'Group Stage', '2026-06-27T00:00:00Z', 'NS'), -- Uruguay vs Spain
 
 -- ─── GROUP I: France, Senegal, Iraq, Norway ──────────────────────────────────
@@ -103,16 +103,16 @@ INSERT INTO matches (api_fixture_id, home_team_api_id, away_team_api_id, stage, 
 
 -- ─── GROUP K: Portugal, DR Congo, Uzbekistan, Colombia ───────────────────────
 (10061, 133908, 136475, 'Group Stage', '2026-06-17T17:00:00Z', 'NS'), -- Portugal vs DR Congo
-(10062, 200011, 134501, 'Group Stage', '2026-06-18T02:00:00Z', 'NS'), -- Uzbekistan vs Colombia
-(10063, 133908, 200011, 'Group Stage', '2026-06-23T17:00:00Z', 'NS'), -- Portugal vs Uzbekistan
+(10062, 200005, 134501, 'Group Stage', '2026-06-18T02:00:00Z', 'NS'), -- Uzbekistan vs Colombia
+(10063, 133908, 200005, 'Group Stage', '2026-06-23T17:00:00Z', 'NS'), -- Portugal vs Uzbekistan
 (10064, 134501, 136475, 'Group Stage', '2026-06-24T02:00:00Z', 'NS'), -- Colombia vs DR Congo
 (10065, 134501, 133908, 'Group Stage', '2026-06-27T23:30:00Z', 'NS'), -- Colombia vs Portugal
-(10066, 136475, 200011, 'Group Stage', '2026-06-27T23:30:00Z', 'NS'), -- DR Congo vs Uzbekistan
+(10066, 136475, 200005, 'Group Stage', '2026-06-27T23:30:00Z', 'NS'), -- DR Congo vs Uzbekistan
 
 -- ─── GROUP L: England, Croatia, Ghana, Panama ────────────────────────────────
 (10067, 133914, 133912, 'Group Stage', '2026-06-17T20:00:00Z', 'NS'), -- England vs Croatia
-(10068, 134513, 200009, 'Group Stage', '2026-06-17T23:00:00Z', 'NS'), -- Ghana vs Panama
+(10068, 134513, 200007, 'Group Stage', '2026-06-17T23:00:00Z', 'NS'), -- Ghana vs Panama
 (10069, 133914, 134513, 'Group Stage', '2026-06-23T20:00:00Z', 'NS'), -- England vs Ghana
-(10070, 200009, 133912, 'Group Stage', '2026-06-23T23:00:00Z', 'NS'), -- Panama vs Croatia
-(10071, 200009, 133914, 'Group Stage', '2026-06-27T21:00:00Z', 'NS'), -- Panama vs England
+(10070, 200007, 133912, 'Group Stage', '2026-06-23T23:00:00Z', 'NS'), -- Panama vs Croatia
+(10071, 200007, 133914, 'Group Stage', '2026-06-27T21:00:00Z', 'NS'), -- Panama vs England
 (10072, 133912, 134513, 'Group Stage', '2026-06-27T21:00:00Z', 'NS'); -- Croatia vs Ghana
