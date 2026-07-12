@@ -37,7 +37,7 @@ export default defineEventHandler(async (event) => {
       api_fixture_id: Math.floor(Date.now() / 1000), // Unix seconds — fits in INTEGER column
       home_team_api_id: body.homeTeamApiId,
       away_team_api_id: body.awayTeamApiId,
-      stage: body.stage,
+      stage: normalizeStage(body.stage),
       match_date: body.matchDate,
       status: 'NS',
     }).select().single()
