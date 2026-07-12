@@ -25,7 +25,7 @@ const resultMatchId = ref<string | null>(null)
 const resultEntry = ref({ homeScore: 0, awayScore: 0, homePensStr: '', awayPensStr: '' })
 const savingResult = ref(false)
 
-const STAGES = ['Group Stage', 'Round of 32', 'Round of 16', 'Quarter-Final', 'Semi-Final', 'Third Place', 'Final']
+const STAGES = ['Group Stage', 'Round of 32', 'Round of 16', 'Quarter-finals', 'Semi-finals', 'Third Place', 'Final']
 
 const teamMap = computed(() => new Map(teams.value.map(t => [t.api_team_id, t])))
 
